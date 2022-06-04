@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moris</title>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<div id="list"></div>
+<script>
+    function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+var skins = ["moris_blue.png","moris_red.png","moris_green.png","moris_yellow.png",]
+var morue = false;
+setTimeout(()=>{var moris = document.querySelectorAll("img");
+
+},200);
+
+function creatButton() {
+    for(let i=0;i<1000;i++){
+        size = Math.random(15)*10;
+        x = getRandomInt(100);
+        y = getRandomInt(100);
+        var btn =  document.createElement('img'); 
+        btn.style.width = size+"%";
+        btn.style.left = x+"%";
+        btn.style.top = y+"%";
+        btn.style.marginTop = "0%";
+        btn.style.marginBottom = "-"+size*90/100+"%";
+
+        btn.id = "moris";
+        btn.src = "moris.png";
+        btn.onmouseover = function(){changeColor(this)};
+
+        elem.appendChild(btn)
+        }
+};
+function changeColor(element){
+    element.src = skins[getRandomInt(skins.length)];
+}
+var elem = document.getElementById("list");
+window.onload = creatButton;
+
+</script>
+
+</body>
+</html>
