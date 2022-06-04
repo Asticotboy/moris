@@ -2,7 +2,7 @@
 @Asticotboy
 Moris
 
-You can access the application from this link :
+You can access the website from this link :
 
 https://asticotboy.github.io/moris/
 
