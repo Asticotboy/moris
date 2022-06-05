@@ -5,20 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moris</title>
-    <style>
-        body{
-            background-color: black;
+    <style>    
+        #moris{
+            
         }
     </style>
 </head>
-<body>
+<body style="background-color:black;">
+
+
 <div id="list"></div>
 <script>
     function getRandomInt(max) {
             return Math.floor(Math.random() * max);
         }
+    
 
-var skins = ["moris_blue.png","moris_red.png","moris_green.png","moris_yellow.png",]
+
+var skins = ["moris_blue.png", "moris_red.png","moris_green.png","moris_yellow.png","moris_violet.png","moris_orange.png","moris_brown.png","moris_black.png"]
 var morue = false;
 setTimeout(()=>{var moris = document.querySelectorAll("img");
 
@@ -26,7 +30,7 @@ setTimeout(()=>{var moris = document.querySelectorAll("img");
 
 function creatButton() {
     for(let i=0;i<1000;i++){
-        size = Math.random(15)*10;
+        size = Math.random(20)*10+4;
         x = getRandomInt(100);
         y = getRandomInt(100);
         var btn =  document.createElement('img'); 
@@ -34,6 +38,8 @@ function creatButton() {
         btn.style.left = x+"%";
         btn.style.top = y+"%";
         btn.style.marginTop = "0%";
+        btn.style.marginRight = "0%";
+        btn.style.marginLeft = "0%";
         btn.style.marginBottom = "-"+size*90/100+"%";
 
         btn.id = "moris";
@@ -44,6 +50,8 @@ function creatButton() {
         }
 };
 function changeColor(element){
+
+
     element.src = skins[getRandomInt(skins.length)];
 }
 var elem = document.getElementById("list");
