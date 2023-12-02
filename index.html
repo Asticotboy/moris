@@ -57,6 +57,12 @@ function changeColor(element){
 var elem = document.getElementById("list");
 window.onload = creatButton;
 
+window.addEventListener('scroll', function() {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        creatButton();
+    }
+});
+
 </script>
 
 </body>
